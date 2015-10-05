@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Pave {
+	public static void main (String [] args) {
+
+		Scanner scan = new Scanner(System.in);
+
+		System.out.println("Longueur: ");
+		float L=scan.nextFloat();
+		while (L<0) {
+			System.out.println("Je ne peux le calculer avec un nombre negatif ! ");
+			L=scan.nextFloat();
+		}
+
+		System.out.println("Largeur: ");
+		float l=scan.nextFloat();
+		while (l<0) {
+			System.out.println("Je ne peux le calculer avec un nombre negatif ! ");
+			l=scan.nextFloat();
+		}
+
+		System.out.println("Hauteur: ");
+		float h=scan.nextFloat();
+		while (h<0) {
+			System.out.println("Je ne peux le calculer avec un nombre negatif ! ");
+			h=scan.nextFloat();
+		}
+		
+		float V=h*L*l;
+
+		System.out.println("le volume est " +V);
+	}
+}
