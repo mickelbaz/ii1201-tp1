@@ -1,0 +1,46 @@
+import java.util.Scanner;
+
+public class Equation {
+    public static void main(String [] args) {
+        
+        Scanner scan = new Scanner(System.in);
+        
+        System.out.println("Polynome de la forme aX^2 + bX + c");
+        
+        System.out.println("Valeur de a (positive) : ");
+        int a=scan.nextInt();
+        
+        System.out.println("Valeur de b : ");
+        int b=scan.nextInt();
+        
+        System.out.println("Valeur de c : ");
+        int c=scan.nextInt();
+        
+        double D=(b)^2-(4*a*c);
+        System.out.println("Delta vaut : " + D);
+        
+        double Racine=Math.sqrt(D);
+        double X0=(-b)/(2*a);
+        double X1=(-b-Racine)/(2*a);
+        double X2=(-b+Racine)/(2*a);
+        double S1=0;
+        double S2=0;
+        
+        if (D>0) {
+            S1=X1;
+            S2=X2;
+            System.out.println("Les solutions de l'equation sont : " + S1 + " et " + S2);
+        }
+        
+        if (D<0) {
+            System.out.println("L'equation n'a pas de solution");
+        }
+        
+        if (D==0) {
+            S1=X0;
+            System.out.println("La solution de l'equation est : " + S1);
+        }
+        
+        
+    }
+}
